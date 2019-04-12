@@ -1,0 +1,200 @@
+<div id="snowman">
+	<div id="hat">
+		<div id="hatTop"></div>
+		<div id="hatBody"></div>
+		<div id="hatBrim"></div>
+	</div>
+	<div id="head">
+		<div id="leftEye" class="eyes"></div>
+		<div id="rightEye" class="eyes"></div>
+		<div id="nose"></div>
+	</div>
+	<div class="arm" id="right_arm">
+		<div class="upper_arm" id="upper_right"></div>
+		<div class="forearm" id="forearm_right"></div>
+	</div>
+	<div class="arm" id="left_arm">
+		<div class="upper_arm" id="upper_left"></div>
+		<div class="forearm" id="forearm_left"></div>
+	</div>
+	<div id="torso">
+		<div class="button"></div>
+		<div class="button"></div>
+		<div class="button"></div>
+	</div>
+	<div id="base"></div>
+</div>
+<style>
+	#snowman {
+		position: relative;
+		left: 100px;
+	}
+	#hat {
+		position: absolute;
+		z-index: 3;
+		animation: hat_tip2 5s infinite;
+	}
+	@keyframes hat_tip2 {
+		0% {transform: rotate(0deg);left: 0px;top: 0px;}
+		15% {transform: rotate(0deg);left: 0px;top: 0px;}
+		25% {transform: rotate(45deg);left: 240px;top: -40px;}
+		75% {transform: rotate(45deg);left: 240px;top: -40px;}
+		85% {transform: rotate(0deg);left: 0px;top: 0px;}
+		100% {transform: rotate(0deg);left: 0px;top: 0px;}
+	}
+	#hatTop {
+		position: absolute;
+		background-color:#444;
+		width: 100px;
+		height: 20px;
+		border-radius: 50%;
+		left: 52px;
+		z-index: 4;
+		top: 5px;
+	}
+	#hatBody {
+		position: absolute;
+		height: 100px;
+		width: 100px;
+		background-color: #000;
+		z-index: 3;
+		left: 52px;
+		top: 15px;
+	}
+	#hatBrim {
+		position: absolute;
+		background-color: #000;
+		z-index: 3;
+		height: 20px;
+		width: 130px;
+		left: 35px;
+    	top: 110px;
+		border-radius: 50%;
+	}
+	#head {
+		top: 95px;
+		background-color: #fff;
+		left: 50px;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		border: 2px solid black;
+		border-radius: 50%;
+		box-shadow: inset -15px 0 4px 5px #eee;
+		z-index: 2;
+	}
+	.eyes {
+		position: absolute;
+		height: 20px;
+		width: 10px;
+		background-color: #000;
+		border-radius: 50%;
+		z-index: 4;
+		top: 35px;
+	}
+	#leftEye {
+		left: 20px;
+		animation: wink 5s infinite;
+	}
+	@keyframes wink {
+		0% {height: 20px; margin-top: 0;}
+		45% {height: 20px; margin-top: 0;}
+		50% {height: 2px; margin-top: 10px;}
+		55% {height: 20px; margin-top: 0;}
+		100% {height: 20px; margin-top: 0;}
+	}
+	#rightEye {
+		left: 70px;
+	}
+	#nose {
+		top: 70px;
+		left: 45px;
+		transform: rotate(15deg);
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 5px solid transparent;
+		border-left: 50px solid orange;
+		border-bottom: 5px solid transparent;
+	}
+	.arm {
+		position: absolute;
+	}
+	#right_arm {
+		left: 120px;
+		transform: rotate(-45deg); top: 200px;
+		animation: hat_tip 5s infinite;
+	}
+	@keyframes hat_tip {
+		0% {transform: rotate(-45deg); top: 200px;}
+		15% {transform: rotate(-125deg); top: 250px;}
+		25% {transform: rotate(-85deg); top: 225px;}
+		75% {transform: rotate(-85deg); top: 225px;}
+		85% {transform: rotate(-125deg); top: 250px;}
+		100% {transform: rotate(-45deg); top: 200px;}
+	}
+	#left_arm {
+		top: 190px;
+		left: 72px;
+		transform: rotate(45deg);
+	}
+	.upper_arm {
+		position: absolute;
+		height: 150px;
+		width: 15px;
+		background-color: brown;
+	}
+	.forearm {
+		position: absolute;
+		height: 100px;
+		width: 15px;
+		background-color: brown;
+	}
+	#forearm_left {
+		transform: rotate(-45deg);
+		left: 35px;
+		top: 130px;
+	}
+	#forearm_right {
+		transform: rotate(-109deg); left: 51px; top: 75px;
+	}
+	#torso {
+		background-color: #fff;
+		top: 175px;
+		left: 25px;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		border: 2px solid black;
+		border-radius: 50%;
+		box-shadow: inset -15px 0 4px 5px #eee;
+		z-index: 1;
+	}
+	.button {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #000;
+		position: absolute;
+		left: 62.5px;
+	}
+	.button:first-of-type {
+		top: 30px;
+	}
+	.button:nth-last-of-type(2) {
+		top: 70px;
+	}
+	.button:last-of-type {
+		top: 110px;
+	}
+	#base {
+		background-color: #fff;
+		top: 300px;
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		border: 2px solid black;
+		border-radius: 50%;
+		box-shadow: inset -15px 0 4px 5px #eee;
+	}
+</style>
